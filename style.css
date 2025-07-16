@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh ; /* Important for vertical centering */
+}
+
+.heart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: shake 1s infinite alternate;
+}
+
+.heart {
+  width: 500px;
+  height: auto;
+  animation: pulse 1s ease-in-out infinite;
+}
+
+/* Heart Beat Animation */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+/* Shake Animation */
+@keyframes shake {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(5px);
+  }
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 600px) {
+  .heart {
+    width: 450px;
+  }
+  
+}
